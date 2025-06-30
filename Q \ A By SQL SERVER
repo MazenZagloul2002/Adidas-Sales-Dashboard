@@ -1,0 +1,85 @@
+use addidas
+Go
+
+
+/* 1️) Which regions generate the highest total sales?*/
+
+SELECT region, SUM([Total Sales]) AS total_revenue
+FROM salesaddidas
+GROUP BY region
+ORDER BY total_revenue DESC;
+
+
+/* 2) Top sellers by earnings*/
+
+select  Retailer,sum([Operating Profit]) as [Total profit]
+from salesaddidas
+group by Retailer
+
+
+/*3) Best Selling Products (Units)*/
+
+select Product,  sum([Units Sold]) as total_units
+from salesaddidas
+group by Product
+
+
+/*4) Best way to sell (In-store vs Online)*/
+
+select [Sales Method] , sum([Total Sales])  AS Total_revenue
+from salesaddidas
+group by [Sales Method]
+ORDER BY Total_revenue DESC;
+
+/*5) Monthly sales change*/
+
+SELECT datepart(month, [Invoice Date]) AS sales_month, 
+       SUM([Total Sales]) AS total_revenue
+FROM salesaddidas
+GROUP BY datepart(month, [Invoice Date])
+ORDER BY sales_month;
+
+
+
+/* 6) The lowest-performing states in terms of sales*/
+
+select top 5 State , sum([Total Sales]) as Total_Revenue 
+from salesaddidas
+group by State
+order by Total_Revenue asc
+
+
+/* 7) Analyzing the relationship between price and number of units sold*/
+
+SELECT [Price per Unit], AVG([Units Sold]) AS avg_units_sold
+FROM salesaddidas
+GROUP BY [Price per Unit]
+ORDER BY [Price per Unit];
+
+
+/* 8) Products with the highest profit margin*/
+
+SELECT product,
+       ROUND(SUM([Operating Profit]) / NULLIF(SUM([Total Sales]), 0), 2) * 100 AS [profit margin %]
+FROM salesaddidas
+GROUP BY product
+ORDER BY [profit margin %] DESC;
+
+
+
+/* 9) Sellers who sell only online*/
+
+select distinct retailer , [Sales Method] 
+from salesaddidas
+where [Sales Method] = 'Online'
+
+
+/*10) Sales distribution by product type (product category analysis)*/
+
+
+SELECT PRODUCT ,
+  SUM([Total Sales]) AS total_revenue
+FROM salesaddidas
+GROUP BY Product
+ORDER BY total_revenue DESC;
+
