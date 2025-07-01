@@ -29,3 +29,6 @@ The dashboard is divided into tabs for easy analysis: Overview – Product – R
 PostgreSQL
 DAX
 Power BI Desktop
+
+![Uploading image.png…]()
+
