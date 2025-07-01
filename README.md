@@ -30,5 +30,16 @@ PostgreSQL
 DAX
 Power BI Desktop
 
-![Uploading image.png…]()
+Addidas Dashboard:
 
+![image](https://github.com/user-attachments/assets/e182486e-5856-4934-b9c7-a159989b4280)
+
+
+![image](https://github.com/user-attachments/assets/dcbb96fd-3d52-4bc0-bae8-ae9e48fe0f1b)
+
+![image](https://github.com/user-attachments/assets/49471c52-8414-4a5c-8c10-959685c29490)
+
+![image](https://github.com/user-attachments/assets/e45fced1-5f4a-4ab6-8f59-734d29dfaee5)
+
+
+![image](https://github.com/user-attachments/assets/4df7ad08-23dc-4b4b-af66-2a6e181eb3fa)
